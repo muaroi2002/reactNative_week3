@@ -26,22 +26,22 @@ export default function App() {
         screenOptions={screenOptions}
         initialRouteName='FirstScreen'
       >
-        {/* <Tab.Screen
+        <Tab.Screen
           name="FirstScreen" component={FirstScreen} />
         <Tab.Screen
           name="Page1_a" component={Page1_a} />
         <Tab.Screen
           name="Page1_b" component={Page1_b} />
         <Tab.Screen 
-          name="Page1_c" component={Page1_c} /> */}
+          name="Page1_c" component={Page1_c} />
         <Tab.Screen
           name="Page1_d" component={Page1_d} />
-        {/* <Tab.Screen
+        <Tab.Screen
           name="Page1_e" component={Page1_e} />
         <Tab.Screen
           name="Page2_a" component={Page2_a} />
         <Tab.Screen
-          name="XMEye" component={XMEye} /> */}
+          name="XMEye" component={XMEye} />
       </Tab.Navigator>
     </NavigationContainer>
   );
