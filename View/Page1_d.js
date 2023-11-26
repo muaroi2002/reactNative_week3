@@ -9,11 +9,11 @@ export default function Page1_d() {
           <Text style={{ fontSize: 25, fontWeight: 'bold' }}>LOGIN</Text>
         </View>
         <View style={styles.headerInput}>
-          <TextInput style={{ width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20 ,marginBottom:50}} placeholder='Email' />
+          <TextInput style={{ width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20, marginBottom: 50 }} placeholder='Email' />
           <View>
             <TextInput style={{ width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20 }} placeholder='Password' />
-            <TouchableOpacity style={{position: 'absolute', right: 10, top: 10 }}>
-            <Image style={{ width: 38, height: 36}} source={require('../assets/eye.png')} />
+            <TouchableOpacity style={{ position: 'absolute', right: 10, top: 10 }}>
+              <Image style={{ width: 38, height: 36 }} source={require('../assets/eye.png')} />
             </TouchableOpacity>
           </View>
         </View>
@@ -24,26 +24,33 @@ export default function Page1_d() {
         </TouchableOpacity>
         <Text style={{ fontSize: 15, textAlign: 'center' }}>When you agree to terms and aonditions</Text>
         <TouchableOpacity>
-        <Text style={{ fontSize: 15, textAlign: 'center', color: '#5D25FA' }}>For got your password?</Text>
+          <Text style={{ fontSize: 15, textAlign: 'center', color: '#5D25FA' }}>For got your password?</Text>
         </TouchableOpacity>
         <Text style={{ fontSize: 15, textAlign: 'center' }}>Or login with</Text>
       </View>
       <View style={styles.footer}>
-         <Image style={{ width: 325, height: 48, borderRightWidth: 1, borderColor: '#0680F1' }} source={require('../assets/footer.png')} />
-        <TouchableOpacity style={{position: 'absolute', top: 50, left: 40}}>
-        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#fff'}}>f</Text>
-        </TouchableOpacity>
-          <TouchableOpacity style={{position: 'absolute', top: 47, left: 150}}>
-          <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#fff'}}>Z</Text>
+      <Image style={{ width: 325, height: 48, borderRightWidth: 1, borderColor: '#0680F1' }} source={require('../assets/footer.png')} />
+        <View style={styles.iconContainer}>
+          <TouchableOpacity>
+            <Text style={styles.iconText}>f</Text>
           </TouchableOpacity>
-        <TouchableOpacity style={{position: 'absolute', top: 60, left: 260 }}>
-        <Image style={{ width: 32, height: 32}} source={require('../assets/google_icon.png')} />
-        </TouchableOpacity>
+        </View>
+        <View style={styles.iconContainer}>
+          <TouchableOpacity>
+            <Text style={styles.iconText}>Z</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.iconContainer}>
+          <TouchableOpacity>
+            <Image style={styles.googleIcon} source={require('../assets/google_icon.png')} />
+          </TouchableOpacity>
+        </View>
       </View>
+
+
     </View>
   );
 }
-//Iphone 11pro max
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -52,7 +59,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   header: {
-    height:'50%',
+    height: '50%',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
@@ -60,14 +67,55 @@ const styles = StyleSheet.create({
     alignItems: 'space-around',
 
   },
-  body : {
-    height:'30%',
+  body: {
+    height: '30%',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
-  footer : {
-    height:'20%',
+  footer: {
+    alignItems: 'center',
+  },
+  backgroundImage: {
+    width: 325,
+    height: 48,
+    borderRightWidth: 1,
+    borderColor: '#0680F1',
+    position: 'relative',
+  },
+  iconContainer: {
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  iconText: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  googleIcon: {
+    width: 32,
+    height: 32,
+  },
+  footer: {
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
+    width: 325,
+    height: 48,
+    borderRightWidth: 1,
+    borderColor: '#0680F1',
+  },
+  iconContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  iconText: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  googleIcon: {
+    width: 32,
+    height: 32,
   },
 });
